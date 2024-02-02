@@ -1,0 +1,53 @@
+{# templates/tu_vista.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}  
+    <style>
+        button{
+            margin-top: 2rem;
+            margin-left: 2.8rem;
+            background-color:#0a0a23;
+            color: #fff;
+            border:none; 
+            border-radius:10px; 
+            padding:15px;
+            min-height:30px; 
+            min-width: 120px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:#002ead;
+            transition: 0.7s;
+        }
+
+        input{
+            padding: 1rem;
+        }
+
+        label{
+            padding-right: 1rem;
+            width: 10rem !important;
+            padding-top: 1rem;
+        }
+
+        #form_select div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+    </style>
+    <main style="width: 100%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
+        <h1 style="padding: 2rem">Generar Archivo Excel</h1>
+        <section style="width: 100%; display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit">Generar Excel</button>
+            {{ form_end(form) }}
+        </section>
+    </main>    
+{% endblock %}

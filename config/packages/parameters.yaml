@@ -1,0 +1,8 @@
+parameters:
+    # rut: true    
+    # name: true
+    # lastName: false
+    # address: true
+    # phone: true
+    # email: false
+    config: ["rut", "name", "lastName", "email"]
