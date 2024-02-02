@@ -5,4 +5,4 @@ parameters:
     # address: true
     # phone: true
     # email: false
-    config: ["rut", "name", "lastName", "email"]
+    fieldSelected   : ["test", "name", "lastName", "email"]

@@ -50,20 +50,39 @@ class ExcelController extends AbstractController
     #[Route('/donwloadExcel', name: 'donwloadExcel')]
     public function donwloadExcel(EntityManagerInterface $entityManager): Response
     {   
-        $config             = $this->getParameter("config");
+        $config             = $this->getParameter("fieldSelected");
+        $metaData           = $entityManager->getClassMetadata(Users::class);
         $repository         = $entityManager->getRepository(Users::class);
         $query              = $repository->createQueryBuilder("u");
         $spreadsheet        = new Spreadsheet();
         $activeWorksheet    = $spreadsheet->getActiveSheet();
         $letters            = "A";
 
+        // $spreadsheet->getActiveSheet()->getStyle($cells)->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('ffffff');
+
         foreach ($config as $key => $item){
+
+            // Si no contiene campo en la tabla, entra al if
+            // name -> contiene no entra en el if
+            // test -> no lo contiene en la tabla entra al if
+            if(!$metaData->hasField($item)){
+                return new Response(
+                    "<html>
+                        <body>
+                            <div style='display: flex; flex-wrap: wrap; justify-content: center;'>
+                                <h1>No se encontro el campo \"{$item}\"</h1>
+                            <div>
+                        </body>
+                    </html>"
+                );
+            }
+
             $query->addSelect("u.$item");
             $activeWorksheet->setCellValue($letters . "1", $item);
             $letters++;
         }
 
-        $result             = $query->getQuery()->getResult(Query::HYDRATE_ARRAY);
+        $result         = $query->getQuery()->getResult(Query::HYDRATE_ARRAY);
 
         foreach($result as $key => $item){
             $letters        = "A";
