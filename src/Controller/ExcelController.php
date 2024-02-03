@@ -51,6 +51,7 @@ class ExcelController extends AbstractController
     public function donwloadExcel(EntityManagerInterface $entityManager): Response
     {   
         $config             = $this->getParameter("fieldSelected");
+        $fieldColorBackground= $this->getParameter("fieldColorBackground");
         $metaData           = $entityManager->getClassMetadata(Users::class);
         $repository         = $entityManager->getRepository(Users::class);
         $query              = $repository->createQueryBuilder("u");
@@ -86,7 +87,13 @@ class ExcelController extends AbstractController
 
         foreach($result as $key => $item){
             $letters        = "A";
-            foreach ($config as $itemKey){
+            foreach ($config as $index => $itemKey){
+                $activeWorksheet->getStyle($letters . $key + 2 )->applyFromArray([
+                    'fill' => [
+                    'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                    'startColor' => ['rgb' => $fieldColorBackground[$index]], 
+                    ],
+                ]);
                 $activeWorksheet->setCellValue($letters . ($key + 2), $item[0][$itemKey]);
                 $letters++;
             }            
