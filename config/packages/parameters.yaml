@@ -6,4 +6,4 @@ parameters:
     # phone: true
     # email: false
     fieldSelected   : ["name", "lastName", "email"]
-    fieldColorBackground : ['FF0000', '00FF00' , '0000FF']
+    fieldColorBackground : ['FF0000', '00FF00']

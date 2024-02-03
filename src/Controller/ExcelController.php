@@ -88,12 +88,14 @@ class ExcelController extends AbstractController
         foreach($result as $key => $item){
             $letters        = "A";
             foreach ($config as $index => $itemKey){
-                $activeWorksheet->getStyle($letters . $key + 2 )->applyFromArray([
-                    'fill' => [
-                    'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
-                    'startColor' => ['rgb' => $fieldColorBackground[$index]], 
-                    ],
-                ]);
+                if (array_key_exists($index, $fieldColorBackground)) {
+                    $activeWorksheet->getStyle($letters . $key + 2 )->applyFromArray([
+                        'fill' => [
+                        'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                        'startColor' => ['rgb' => $fieldColorBackground[$index]], 
+                        ],
+                    ]); 
+                }                
                 $activeWorksheet->setCellValue($letters . ($key + 2), $item[0][$itemKey]);
                 $letters++;
             }            
