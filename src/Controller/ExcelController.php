@@ -94,7 +94,7 @@ class ExcelController extends AbstractController
                         'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
                         'startColor' => ['rgb' => $fieldColorBackground[$index]], 
                         ],
-                    ]); 
+                    ]);
                 }                
                 $activeWorksheet->setCellValue($letters . ($key + 2), $item[0][$itemKey]);
                 $letters++;

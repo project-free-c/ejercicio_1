@@ -5,5 +5,5 @@ parameters:
     # address: true
     # phone: true
     # email: false
-    fieldSelected   : ["name", "lastName", "email"]
-    fieldColorBackground : ['FF0000', '00FF00']
+    fieldSelected   : ["email", "lastName", "name"]
+    fieldColorBackground : ['FF0000']
