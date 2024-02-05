@@ -155,3 +155,96 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________
 
+## NEW VERSION [1.3.0] - 2024-02-02
+### Added
+- Se agregó un nuevo parametro que permite la confg. del color de la celda en el archivo excel generado "fieldColorBackground". 
+- Se agregó la fucnionalidad que recorre las celdas del excel generado y llenado de color.
+
+- https://github.com/training-webFactura/ejercicio_1/commit/f00b3a155880c757e21aee3f84a131668c005303
+    - feat(): Función llenar celdas que tengan datos.
+
+- Desarrollador Responsable : Esteban Cárdenas
+
+### Entidades
+- No presentaron cambios.
+
+### Clases
+- No presentaron cambios.
+
+### Controladores
+- src/Controller/ExcelController.php 
+    - Nueva funcion de colorear las celdas excel.
+        - Nombre : donwloadExcel
+    - Variable con el parametro que permite llenar las celdas con el color indicado en parameters.yaml.
+        - Nombre : $fieldColorBackground
+    
+### Formularios
+- No presentaron cambios.
+
+### Comandos
+- No presentaron cambios.
+
+### Vistas
+- No presentaron cambios.
+
+### Repositorios
+- No presentaron cambios.
+
+### Eventos
+- No presentaron cambios.
+
+### Base de datos
+- No presentaron cambios.
+
+### Rutas
+- No presentaron cambios.
+
+### Config
+- config/packages/parameters.yaml
+    - Se agregó el "fieldColorBackground"
+____________________________________________________________________________________________________________________
+ 
+ ## NEW VERSION [1.4.0] - 2024-02-02
+### Added
+- Se validó la confg. del color de la celda en el archivo excel. 
+- Se eliminó el error que no permitía solicitar más campos en la grilla si no se indicaban la misma cantidad de colores.
+
+- https://github.com/training-webFactura/ejercicio_1/commit/f00b3a155880c757e21aee3f84a131668c005303
+    - feat(): Función validada y que añade un color a cada celda con datos y repetir si son más de los colores indicados previamente.
+
+- Desarrollador Responsable : Esteban Cárdenas
+
+### Entidades
+- No presentaron cambios.
+
+### Clases
+- No presentaron cambios.
+
+### Controladores
+- src/Controller/ExcelController.php 
+    - Se agregó la sentencia IF capaz de distinguir entre la cantidad de filas de datos solicitadas y el color asignado a dicha fila.
+    
+### Formularios
+- No presentaron cambios.
+
+### Comandos
+- No presentaron cambios.
+
+### Vistas
+- No presentaron cambios.
+
+### Repositorios
+- No presentaron cambios.
+
+### Eventos
+- No presentaron cambios.
+
+### Base de datos
+- No presentaron cambios.
+
+### Rutas
+- No presentaron cambios.
+
+### Config
+- No presentaron cambios.
+
