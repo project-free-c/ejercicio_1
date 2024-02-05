@@ -106,3 +106,52 @@ ________________________________________________________________________________
 - No presentaron cambios.
 
 ____________________________________________________________________________________________________________________
+
+## NEW VERSION [1.2.0] - 2024-02-02
+### Added
+
+- https://github.com/training-webFactura/ejercicio_1/commit/5f84afbe8f3818bf09b36c71746c1cc180105b9e
+    - feat(): Validación de si no existe el campo y archivo configuración.
+
+- Desarrollador Responsable : Nibaldo chavez
+
+### Entidades
+- No presentaron cambios.
+
+### Clases
+- No presentaron cambios.
+
+### Controladores
+- src/Controller/ExcelController.php 
+    - Nueva validación para configuración y validación si no existe el campo.
+        - Nombre : donwloadExcel
+    
+### Formularios
+- No presentaron cambios.
+
+### Comandos
+- No presentaron cambios.
+
+### Vistas
+- No presentaron cambios.
+
+### Repositorios
+- No presentaron cambios.
+
+### Eventos
+- No presentaron cambios.
+
+### Base de datos
+- No presentaron cambios.
+
+### Rutas
+- No presentaron cambios.
+
+### Config
+- config/services.yml
+    - Se agrego el import de "config/packages/parameters.yaml"
+- config/packages/parameters.yaml
+    - Se creo la configuración parameters.yaml
+
+____________________________________________________________________________________________________________________
+
