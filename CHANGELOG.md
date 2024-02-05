@@ -66,3 +66,43 @@
         - Nombre ruta : generarExcel
         - Nombre ruta : donwloadExcel
 ____________________________________________________________________________________________________________________
+
+## NEW VERSION [1.1.0] - 2024-02-02
+### Added
+- Se modificó el archivo README.md con el objetivo de sellar el nombre de los autores del proyecto práctico.
+- https://github.com/training-webFactura/ejercicio_1/commit/78eb93714b9f82a768d3bb9cd2bc7de916dd076e
+    - feat(): Firma de los autores.
+
+- Desarrollador Responsable : Esteban Cárdenas
+
+### Entidades
+- No presentaron cambios.
+
+### Clases
+- No presentaron cambios.
+
+### Controladores
+- No presentaron cambios.
+    
+### Formularios
+- No presentaron cambios.
+
+### Comandos
+- No presentaron cambios.
+
+### Vistas
+- No presentaron cambios.
+
+### Repositorios
+- No presentaron cambios.
+
+### Eventos
+- No presentaron cambios.
+
+### Base de datos
+- No presentaron cambios.
+
+### Rutas
+- No presentaron cambios.
+
+____________________________________________________________________________________________________________________
