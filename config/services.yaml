@@ -19,4 +19,4 @@ services:
             - '../src/Kernel.php'
 
 imports:
-    - { resource: "/code/ejercicio_1/config/packages/parameters.yaml" }
+    - { resource: "/code/config/packages/parameters.yaml" }
