@@ -7,6 +7,6 @@ RUN apt-get update && \
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-WORKDIR /code
+WORKDIR /code/ejercicio_1
 
 RUN composer update --no-interaction --optimize-autoloader --ignore-platform-req=ext-gd --ignore-platform-req=ext-zip --verbose
